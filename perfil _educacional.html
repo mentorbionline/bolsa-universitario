@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Educacional - Bolsa Universitária</title>
+    <link rel="stylesheet" href="bolsa_universitario.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Perfil Educacional</h1>
+        </header>
+
+        <form class="form" action="questoes_semestre.html" method="GET">
+            <!-- Informações Gerais do Curso -->
+            <h2>Informações do Curso</h2>
+            <div class="form-group">
+                <label for="instituicao_ensino">Nome da Instituição de Ensino Superior (IES)</label>
+                <input type="text" id="instituicao_ensino" name="instituicao_ensino" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo_graduacao">Tipo de Graduação</label>
+                <select id="tipo_graduacao" name="tipo_graduacao" required>
+                    <option value="bacharelado">Bacharelado</option>
+                    <option value="licenciatura">Licenciatura</option>
+                    <option value="tecnologo">Tecnólogo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="modalidade_ensino">Modalidade de Ensino</label>
+                <select id="modalidade_ensino" name="modalidade_ensino" required>
+                    <option value="presencial">Presencial</option>
+                    <option value="ead">EAD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nome_curso">Nome do Curso</label>
+                <input type="text" id="nome_curso" name="nome_curso" required>
+            </div>
+
+            <!-- Detalhes Acadêmicos -->
+            <div class="form-group">
+                <label for="semestres_total">Seu curso são quantos semestres?</label>
+                <select id="semestres_total" name="semestres_total" required>
+                    <option value="4">4</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="semestre_atual">Atualmente você está em qual semestre?</label>
+                <input type="number" id="semestre_atual" name="semestre_atual" required>
+            </div>
+            <div class="form-group">
+                <label for="cadeiras_total">Quantas cadeiras tem o seu curso?</label>
+                <input type="number" id="cadeiras_total" name="cadeiras_total" required>
+            </div>
+            <div class="form-group">
+                <label for="cadeiras_feitas">Quantas cadeiras você já fez até agora?</label>
+                <input type="number" id="cadeiras_feitas" name="cadeiras_feitas" required>
+            </div>
+
+            <!-- Informações sobre Turno -->
+            <div class="form-group">
+                <label for="turno">Turno</label>
+                <select id="turno" name="turno" required>
+                    <option value="matutino">Matutino</option>
+                    <option value="vespertino">Vespertino</option>
+                    <option value="noturno">Noturno</option>
+                </select>
+            </div>
+
+            <!-- Botões para Continuar e Voltar -->
+            <div class="form-group buttons">
+                <button type="button" class="btn-back" onclick="window.history.back()">Voltar</button>
+                <button type="submit" class="btn-submit">Continuar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

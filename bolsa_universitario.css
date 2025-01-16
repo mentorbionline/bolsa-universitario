@@ -1,0 +1,166 @@
+/* Fundo geral */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F3F4F6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante centralização em alturas menores */
+}
+
+/* Container */
+.container {
+    width: 1080px;
+    max-width: 100%; /* Garante responsividade */
+    height: 920px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 40px 60px;
+    overflow-y: auto;
+}
+
+/* Header */
+.header h1 {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: #1F2937;
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Títulos das Seções */
+h2 {
+    grid-column: span 2;
+    font-size: 20px;
+    color: #1F2937;
+    margin: 30px 0 20px; /* Aumenta separação com os campos */
+    border-bottom: 2px solid #E5E7EB;
+    padding-bottom: 5px;
+}
+
+h3 {
+    grid-column: span 2;
+    font-size: 18px;
+    color: #4B5563;
+    margin: 20px 0 10px;
+}
+
+/* Campos de formulário */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #4B5563;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #111827;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    background-color: #F3F4F6; /* Fundo mais claro no foco */
+    border-color: #2563EB; /* Azul vibrante no foco */
+    outline: 2px solid #2563EB; /* Adiciona acessibilidade */
+}
+
+/* Botões Gerais */
+.btn {
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+.btn-submit {
+    color: #FFFFFF;
+    background-color: #1F2937; /* Preto ou cinza escuro */
+}
+
+.btn-submit:hover {
+    background-color: #2D3748; /* Preto mais claro no hover */
+    color: #E5E7EB; /* Texto mais claro no hover */
+}
+
+.btn-back {
+    color: #1F2937; /* Texto em preto */
+    background-color: #E5E7EB; /* Fundo cinza claro */
+}
+
+.btn-back:hover {
+    background-color: #D1D5DB; /* Fundo cinza mais escuro no hover */
+}
+
+/* Centralizar botões únicos */
+.form-group.single-button {
+    display: flex;
+    justify-content: center; /* Centraliza botão único */
+    margin-top: 20px;
+}
+
+/* Container para botões em grupo */
+.form-group.buttons {
+    display: flex;
+    justify-content: space-between; /* Distribui os botões uniformemente */
+    align-items: center;           /* Centraliza os botões verticalmente */
+    gap: 20px;                     /* Espaço entre os botões */
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .form {
+        grid-template-columns: 1fr; /* Ajusta para uma coluna */
+    }
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    .form-group.buttons {
+        flex-direction: column; /* Empilha os botões em telas menores */
+        gap: 10px;
+    }
+
+    .btn-back, .btn-submit {
+        width: 100%; /* Botões ocupam toda a largura */
+    }
+}

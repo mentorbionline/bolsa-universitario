@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações sobre Semestres - Bolsa Universitária</title>
+    <link rel="stylesheet" href="bolsa_universitario.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Informações sobre Semestres</h1>
+        </header>
+
+        <form class="form" action="finalizar.html" method="POST">
+            <!-- Questões sobre Semestre Passado -->
+            <h2>Semestre Passado</h2>
+            <div class="form-group">
+                <label for="cadeiras_passado">Quantas cadeiras você fez semestre passado?</label>
+                <input type="number" id="cadeiras_passado" name="cadeiras_passado" required>
+            </div>
+            <div class="form-group">
+                <label for="media_notas">Qual foi a sua média de notas geral no semestre anterior?</label>
+                <input type="number" id="media_notas" name="media_notas" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="faltas_passado">Teve alguma falta semestre passado?</label>
+                <select id="faltas_passado" name="faltas_passado" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="faltas_qtd">Quantas faltas?</label>
+                <input type="number" id="faltas_qtd" name="faltas_qtd">
+            </div>
+            <div class="form-group">
+                <label for="disciplinas_reprovadas">Você reprovou alguma disciplina semestre passado?</label>
+                <select id="disciplinas_reprovadas" name="disciplinas_reprovadas" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="disciplinas_reprovadas_qtd">Quantas disciplinas?</label>
+                <input type="number" id="disciplinas_reprovadas_qtd" name="disciplinas_reprovadas_qtd">
+            </div>
+            <div class="form-group">
+                <label for="disciplinas_trancadas">Você trancou alguma disciplina semestre passado?</label>
+                <select id="disciplinas_trancadas" name="disciplinas_trancadas" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="disciplinas_trancadas_qtd">Quantas disciplinas?</label>
+                <input type="number" id="disciplinas_trancadas_qtd" name="disciplinas_trancadas_qtd">
+            </div>
+
+            <!-- Planejamento para Próximo Semestre -->
+            <h2>Próximo Semestre</h2>
+            <div class="form-group">
+                <label for="cadeiras_proximas">Quantas cadeiras pretende fazer este semestre? (min 3)</label>
+                <input type="number" id="cadeiras_proximas" name="cadeiras_proximas" required>
+            </div>
+            <div class="form-group">
+                <label for="dias_aulas">Quais dias da semana serão suas aulas?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="dias_aulas[]" value="segunda"> Segunda</label>
+                    <label><input type="checkbox" name="dias_aulas[]" value="terca"> Terça</label>
+                    <label><input type="checkbox" name="dias_aulas[]" value="quarta"> Quarta</label>
+                    <label><input type="checkbox" name="dias_aulas[]" value="quinta"> Quinta</label>
+                    <label><input type="checkbox" name="dias_aulas[]" value="sexta"> Sexta</label>
+                </div>
+            </div>
+
+            <!-- Botão para Finalizar -->
+            <button type="submit" class="btn-submit">Finalizar</button>
+        </form>
+    </div>
+</body>
+</html>

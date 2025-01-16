@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos - Bolsa Universitária</title>
+    <link rel="stylesheet" href="bolsa_universitario.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Cadastro de Alunos - Bolsa Universitária</h1>
+        </header>
+
+        <form class="form" action="perfil_educacional.html" method="GET">
+            <!-- Dados Pessoais -->
+            <h2>Dados Pessoais</h2>
+            <div class="form-group">
+                <label for="nome_completo">Nome Completo do Estudante</label>
+                <input type="text" id="nome_completo" name="nome_completo" required>
+            </div>
+            <div class="form-group">
+                <label for="data_nascimento">Data de Nascimento</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+            </div>
+            <div class="form-group">
+                <label for="representante_legal">Nome do Representante Legal (se aplicável)</label>
+                <input type="text" id="representante_legal" name="representante_legal">
+            </div>
+            <div class="form-group">
+                <label for="filiacao">Filiação</label>
+                <input type="text" id="filiacao" name="filiacao" required>
+            </div>
+            <div class="form-group">
+                <label for="estado_civil">Estado Civil</label>
+                <select id="estado_civil" name="estado_civil" required>
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="viuvo">Viúvo(a)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="transporte_universitario">Você irá usar o transporte universitário este semestre?</label>
+                <select id="transporte_universitario" name="transporte_universitario" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+            <!-- Adicionar Endereço, Bairro, Município e UF -->
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro" required>
+            </div>
+            <div class="form-group">
+                <label for="municipio">Município</label>
+                <input type="text" id="municipio" name="municipio" value="Aquiraz" readonly>
+            </div>
+            <div class="form-group">
+                <label for="uf">UF</label>
+                <input type="text" id="uf" name="uf" value="CE" readonly>
+            </div>
+
+            <!-- Perfil Socioeconômico -->
+            <h2>Perfil Socioeconômico</h2>
+            <div class="form-group">
+                <label for="composicao_familiar">Composição Familiar</label>
+                <input type="number" id="composicao_familiar" name="composicao_familiar" required>
+            </div>
+            <div class="form-group">
+                <label for="renda_familiar">Renda Familiar (total dos membros)</label>
+                <input type="number" id="renda_familiar" name="renda_familiar" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo_moradia">Tipo de Moradia</label>
+                <select id="tipo_moradia" name="tipo_moradia" required>
+                    <option value="aluguel">Aluguel</option>
+                    <option value="proprio">Próprio</option>
+                    <option value="pais">Pais</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <!-- Botão para Continuar -->
+            <button type="submit" class="btn-submit">Continuar</button>
+        </form>
+    </div>
+</body>
+</html>

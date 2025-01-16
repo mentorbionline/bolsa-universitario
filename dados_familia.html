@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados da Família - Bolsa Universitária</title>
+    <link rel="stylesheet" href="bolsa_universitario.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Dados da Família</h1>
+        </header>
+
+        <form class="form" action="finalizar.html" method="POST">
+            <!-- Perguntas sobre a Família -->
+            <h2>Informações sobre a Família</h2>
+            <div class="form-group">
+                <label for="composicao_familiar">Qual é a composição da sua família? (Número de pessoas que moram na mesma residência)</label>
+                <input type="number" id="composicao_familiar" name="composicao_familiar" required>
+            </div>
+            <div class="form-group">
+                <label for="fonte_renda">Qual é a principal fonte de renda da família?</label>
+                <input type="text" id="fonte_renda" name="fonte_renda" required>
+            </div>
+            <div class="form-group">
+                <label for="pessoas_deficiencia">Há pessoas com deficiência ou necessidades especiais na família?</label>
+                <select id="pessoas_deficiencia" name="pessoas_deficiencia" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="escolaridade_adultos">Qual é o nível de escolaridade dos membros adultos da família?</label>
+                <select id="escolaridade_adultos" name="escolaridade_adultos" required>
+                    <option value="fundamental">Fundamental</option>
+                    <option value="medio">Médio</option>
+                    <option value="superior">Superior</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="acesso_internet">A família possui acesso à internet em casa?</label>
+                <select id="acesso_internet" name="acesso_internet" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="meio_transporte">Qual é o meio de transporte mais utilizado para deslocamentos?</label>
+                <input type="text" id="meio_transporte" name="meio_transporte" required>
+            </div>
+            <div class="form-group">
+                <label for="desempregado">Há algum membro da família desempregado atualmente?</label>
+                <select id="desempregado" name="desempregado" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="desafios_familia">Quais são os principais desafios enfrentados pela sua família no dia a dia?</label>
+                <input type="text" id="desafios_familia" name="desafios_familia" required>
+            </div>
+            <div class="form-group">
+                <label for="atividades_comunitarias">A família participa de atividades comunitárias ou associações locais?</label>
+                <select id="atividades_comunitarias" name="atividades_comunitarias" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="microempreendedor">Algum membro da família é microempreendedor ou possui um pequeno negócio?</label>
+                <select id="microempreendedor" name="microempreendedor" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+
+            <!-- Botão de Submissão -->
+            <button type="submit" class="btn-submit">Finalizar</button>
+        </form>
+    </div>
+</body>
+</html>
